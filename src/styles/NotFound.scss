@@ -1,0 +1,30 @@
+@import "vars";
+@import "animate.css";
+
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60.9px);
+  width: 100%;
+}
+
+.NotFound-container {
+  text-align: center;
+  color: #121212;
+
+  h1 {
+    font-size: 120px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 28px;
+    margin: 0;
+  }
+}
+
+.animate__animated.animate__bounce {
+  --animate-duration: 3s;
+}
