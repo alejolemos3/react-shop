@@ -1,16 +1,33 @@
 @import "vars";
 
 .MyOrder {
+  display: inline-block;
   width: 360px;
   padding: 24px;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   right: 0;
   background: var(--white);
   top: 60px;
   bottom: 0;
   border-radius: 6px;
   border: 1px solid var(--very-light-pink);
+}
+.orderProducts {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.orderProducts::-webkit-scrollbar {
+  width: 10px;
+}
+.orderProducts::-webkit-scrollbar-thumb {
+  background: var(--text-input-field);
+  border-radius: 5px;
+  transition: background 2s;
+}
+.orderProducts::-webkit-scrollbar-thumb:hover {
+  background: var(--very-light-pink);
 }
 .title-container {
   display: flex;
@@ -23,13 +40,16 @@
   font-size: var(--lg);
   font-weight: bold;
 }
+.btnAndOrder {
+  align-self: flex-end;
+}
 .order {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 16px;
   align-items: center;
   background-color: var(--text-input-field);
-  margin-bottom: 24px;
+  margin: 24px 0 24px;
   border-radius: 8px;
   padding: 0 24px;
 }
