@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const initialState = {
   cart: [],
+  toggleOrders: false
 };
 
 const useInitialState = () => {
@@ -15,15 +16,35 @@ const useInitialState = () => {
   };
 
   const removeFromCart = payload => {
+    const fooIdx = state.cart.findIndex(({id}) => payload.id === id)
+    if (fooIdx > -1){
+      let foo = [...state.cart]
+      foo.splice(fooIdx, 1)
+      setState({
+        ...state,
+        cart: [...foo],
+        lastIdRemoved: payload.id
+      });
+    };
+  };
+
+  const changeToggle = () => {
     setState({
       ...state,
-      cart: state.cart.filter(item => item.id !== payload.id)
+      toggleOrders: !state.toggleOrders
     });
   };
+
+  const isInCart = productId => {
+    return state.cart.some(product => product.id === productId);
+  };
+
   return {
     state,
     addToCart,
-    removeFromCart
+    removeFromCart,
+    changeToggle,
+    isInCart
   };
 };
 

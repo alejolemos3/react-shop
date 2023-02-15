@@ -9,9 +9,8 @@ import MyOrder from "@containers/MyOrder";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
-  const [toggleOrders, setToggleOrders] = useState(false);
 
-  const { state } = useContext(AppContext);
+  const { state, changeToggle } = useContext(AppContext);
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -50,7 +49,7 @@ const Header = () => {
           </li>
           <li
             className="navbar-shopping-cart"
-            onClick={() => setToggleOrders(!toggleOrders)}
+            onClick={changeToggle}
           >
             <img src={shoppingCart} alt="shopping cart" />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
@@ -58,7 +57,7 @@ const Header = () => {
         </ul>
       </div>
       {toggle && <DesktopMenu />}
-      {toggleOrders && <MyOrder />}
+      {state.toggleOrders && <MyOrder />}
     </nav>
   );
 };
