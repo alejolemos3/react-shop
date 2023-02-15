@@ -22,15 +22,15 @@ const App = () => {
 		<BrowserRouter>
 			<Layout>
 				<Routes>
-					<Route  path="/" element={<Home />} />
-					<Route  path="/login" element={<Login />} />
-					<Route  path="/password-recovery" element={<PasswordRecovery />} />
-					<Route  path="/send-email" element={<SendEmail />} />
-					<Route  path="/new-password" element={<NewPassword />} />
-					<Route  path="/account" element={<MyAccount />} />
-					<Route  path="/signup" element={<CreateAccount />} />
-					<Route  path="/checkout" element={<Checkout />} />
-					<Route  path="/orders" element={<Orders />} />
+					<Route  path="react-shop/" element={<Home />} />
+					<Route  path="react-shop/login" element={<Login />} />
+					<Route  path="react-shop/password-recovery" element={<PasswordRecovery />} />
+					<Route  path="react-shop/send-email" element={<SendEmail />} />
+					<Route  path="react-shop/new-password" element={<NewPassword />} />
+					<Route  path="react-shop/account" element={<MyAccount />} />
+					<Route  path="react-shop/signup" element={<CreateAccount />} />
+					<Route  path="react-shop/checkout" element={<Checkout />} />
+					<Route  path="react-shop/orders" element={<Orders />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</Layout>
