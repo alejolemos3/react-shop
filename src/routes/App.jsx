@@ -31,7 +31,7 @@ const App = () => {
 					<Route  path="react-shop/signup" element={<CreateAccount />} />
 					<Route  path="react-shop/checkout" element={<Checkout />} />
 					<Route  path="react-shop/orders" element={<Orders />} />
-					<Route path="*" element={<NotFound />} />
+					<Route path="react-shop/*" element={<NotFound />} />
 				</Routes>
 			</Layout>
 		</BrowserRouter>
