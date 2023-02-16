@@ -28,7 +28,7 @@ const useInitialState = () => {
     };
   };
 
-  const changeToggle = () => {
+  const changeToggleOrders = () => {
     setState({
       ...state,
       toggleOrders: !state.toggleOrders
@@ -43,7 +43,7 @@ const useInitialState = () => {
     state,
     addToCart,
     removeFromCart,
-    changeToggle,
+    changeToggleOrders,
     isInCart
   };
 };

@@ -3,12 +3,25 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
   border-bottom: 1px solid var(--very-light-pink);
   position: fixed;
   top: 0;
-  width: calc(100% - 48px);
+  width: 100%;
   background: var(--white);
+  user-select: none;
+}
+.mobileMenuBtn, .shoppingCartBtn {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-content: center;
+  background: var(--white);
+
+}
+.mobileMenuBtn img {
+  max-width: 40%;
+  height: auto;
 }
 .menu {
   display: none;
@@ -54,6 +67,9 @@ nav {
 }
 .navbar-shopping-cart {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navbar-shopping-cart div {
   width: 16px;
@@ -63,8 +79,8 @@ nav {
   font-size: var(--sm);
   font-weight: bold;
   position: absolute;
-  top: -6px;
-  right: -3px;
+  top: 10px;
+  right: -6px;
   display: flex;
   justify-content: center;
   align-items: center;
