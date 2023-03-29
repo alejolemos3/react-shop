@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>React Shop</title>
+          <title>My Shop</title>
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-TWP61LGQGN"

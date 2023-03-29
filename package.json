@@ -1,6 +1,9 @@
 {
+  "homepage": "https://alejolemos3.github.io/react-shop",
   "name": "platzistore",
   "version": "0.1.0",
+  "description": "Desc",
+  "main": "src/index.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
